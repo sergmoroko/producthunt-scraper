@@ -113,11 +113,7 @@ public class Scraper {
                 new InputStreamReader((response.getEntity().getContent())));
 
         String output;
-        String json = "";
-
-        while ((output = br.readLine()) != null) {
-            json = output;
-        }
+        String json = br.readLine();
 
         httpclient.getConnectionManager().shutdown();
 
